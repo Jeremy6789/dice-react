@@ -1,0 +1,207 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  height: 100vh; /* 讓容器填滿全螢幕 */
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 垂直置中內容 */
+  align-items: center; /* 水平置中內容 */
+}
+
+.dice-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 居中 */
+  margin: 20px;
+}
+
+.dice-group {
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  margin: 10px;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 5px;
+  margin: 10px;
+  border: 4px solid black;
+  background-color: black;
+  position: relative;
+  border-radius: 5px;
+  align-items: center; /* 垂直置中 */
+  justify-items: center; /* 水平置中 */
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+/* 不同點數的白點位置 */
+.dice-1 .dot-1 {
+  visibility: visible;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.dice-2 .dot-1,
+.dice-2 .dot-2 {
+  visibility: visible;
+}
+
+.dice-2 .dot-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.dice-2 .dot-2 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.dice-3 .dot-1,
+.dice-3 .dot-2,
+.dice-3 .dot-3 {
+  visibility: visible;
+}
+
+.dice-3 .dot-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.dice-3 .dot-2 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.dice-3 .dot-3 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.dice-4 .dot-1,
+.dice-4 .dot-2,
+.dice-4 .dot-3,
+.dice-4 .dot-4 {
+  visibility: visible;
+}
+
+.dice-4 .dot-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.dice-4 .dot-2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.dice-4 .dot-3 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.dice-4 .dot-4 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.dice-5 .dot-1,
+.dice-5 .dot-2,
+.dice-5 .dot-3,
+.dice-5 .dot-4,
+.dice-5 .dot-5 {
+  visibility: visible;
+}
+
+.dice-5 .dot-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.dice-5 .dot-2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.dice-5 .dot-3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.dice-5 .dot-4 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.dice-5 .dot-5 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.dice-6 .dot-1,
+.dice-6 .dot-2,
+.dice-6 .dot-3,
+.dice-6 .dot-4,
+.dice-6 .dot-5,
+.dice-6 .dot-6 {
+  visibility: visible;
+}
+
+.dice-6 .dot-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.dice-6 .dot-2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.dice-6 .dot-3 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.dice-6 .dot-4 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.dice-6 .dot-5 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.dice-6 .dot-6 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.shaking {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
